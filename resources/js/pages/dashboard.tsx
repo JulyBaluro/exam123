@@ -28,7 +28,7 @@ export default function Dashboard() {
                     <form onSubmit={submit} className="max-w-x1 space-y-2 rounded-x1 border p-4">
 
                         <div className="space-y-2">
-                            <label htmlFor="room_name">RoomName</label>
+                            <label htmlFor="room_name">Room Name</label>
                             <Input
                                 id="room_name"
                                 value={form.data.room_name}
