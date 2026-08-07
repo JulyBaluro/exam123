@@ -20,9 +20,9 @@ export default function Dashboard() {
             <Head title="July Hotel" />
             <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4">
                 <div>
-                    <h1 className="text-x1 font-semibold">Room Number</h1>
+                    <h1 className="text-x1 font-semibold">July Hotel</h1>
                     <p className="text-sm text-muted-foreground">
-                        Room Number
+                        Welcome to July Hotel Dashboard.
                     </p>
 
                     <form onSubmit={submit} className="max-w-x1 space-y-2 rounded-x1 border p-4">
