@@ -39,7 +39,7 @@ export default function Dashboard() {
 
 
                         <div className="space-y-2">
-                            <label htmlFor="room_number">Description</label>
+                            <label htmlFor="room_number">Room Number</label>
                             <Input
                                 id="room_number"
                                 value={form.data.room_number}
@@ -76,7 +76,7 @@ export default function Dashboard() {
 
 
                         </div>
-                        <Button type="submit" disabled={form.processing}>Save Product</Button>
+                        <Button type="submit" disabled={form.processing}>Save Room</Button>
 
                     </form>
 

@@ -13,7 +13,7 @@ class RoomexamController extends Controller
      */
     public function index()
     {
-        return Inertia::render('dashboard', ['products' => roomexam::query()->latest()->get(),]);
+        return Inertia::render('dashboard', ['roomexams' => roomexam::query()->latest()->get(),]);
     }
 
     // /**
