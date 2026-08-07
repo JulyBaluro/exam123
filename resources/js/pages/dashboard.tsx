@@ -11,7 +11,7 @@ export default function Dashboard() {
 
     function submit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        form.post('/roomexams', {
+        form.post('/dashboard', {
             onSuccess: () => form.reset(),
         });
     }
@@ -28,7 +28,7 @@ export default function Dashboard() {
                     <form onSubmit={submit} className="max-w-x1 space-y-2 rounded-x1 border p-4">
 
                         <div className="space-y-2">
-                            <label htmlFor="room_name">Name</label>
+                            <label htmlFor="room_name">RoomName</label>
                             <Input
                                 id="room_name"
                                 value={form.data.room_name}
