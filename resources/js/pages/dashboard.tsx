@@ -17,7 +17,7 @@ export default function Dashboard() {
     }
     return (
         <>
-            <Head title="Dashboard" />
+            <Head title="July Hotel" />
             <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4">
                 <div>
                     <h1 className="text-x1 font-semibold">Room Number</h1>

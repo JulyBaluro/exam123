@@ -43,18 +43,18 @@ class RoomexamController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(roomexam $roomexam)
-    {
-        //
-    }
+    // public function show(roomexam $roomexam)
+    // {
+    //     //
+    // }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(roomexam $roomexam)
-    {
-        //
-    }
+    // /**
+    //  * Show the form for editing the specified resource.
+    //  */
+    // public function edit(roomexam $roomexam)
+    // {
+    //     //
+    // }
 
     /**
      * Update the specified resource in storage.
