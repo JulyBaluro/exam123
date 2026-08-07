@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('roomexams', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('room_name');
+            $table->unsignedInteger('room_number');
+            $table->string('condition');
+            $table->string('room_floor');
+            $table->string('room_type');
         });
     }
 

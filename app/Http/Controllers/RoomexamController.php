@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\roomexam;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class RoomexamController extends Controller
 {
@@ -12,23 +13,31 @@ class RoomexamController extends Controller
      */
     public function index()
     {
-        //
+        return Inertia::render('dashboard', ['products' => roomexam::query()->latest()->get(),]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+    // /**
+    //  * Show the form for creating a new resource.
+    //  */
+    // public function create()
+    // {
+    //     //
+    // }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    // /**
+    //  * Store a newly created resource in storage.
+
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'room_name' => ['required', 'string', 'max:100'],
+            'room_number' => ['required', 'integer'],
+            'condition' => ['required', 'string', 'max:100'],
+            'room_floor' => ['required', 'string', 'max:100'],
+            'room_type' => ['required', 'string', 'max:100'],
+        ]);
+        roomexam::create($data);
+        return redirect()->route('dashboard');
     }
 
     /**
@@ -52,7 +61,15 @@ class RoomexamController extends Controller
      */
     public function update(Request $request, roomexam $roomexam)
     {
-        //
+        $data = $request->validate([
+            'room_name' => ['required', 'string', 'max:100'],
+            'room_number' => ['required', 'integer'],
+            'condition' => ['required', 'string', 'max:100'],
+            'room_floor' => ['required', 'string', 'max:100'],
+            'room_type' => ['required', 'string', 'max:100'],
+        ]);
+        $roomexam->update($data);
+        return redirect()->route('dashboard');
     }
 
     /**
@@ -60,6 +77,7 @@ class RoomexamController extends Controller
      */
     public function destroy(roomexam $roomexam)
     {
-        //
+        $roomexam->delete();
+        return redirect()->route('dashboard');
     }
 }
